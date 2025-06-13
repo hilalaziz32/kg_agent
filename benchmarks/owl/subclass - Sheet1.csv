@@ -1,0 +1,6 @@
+Test ID,OWL Concept,Scenario Description,R²L Rule Example,UDF Required?,Input Facts,Expected Output,Will Work?,Reason for Pass/Fail
+SUB-001,Subclassing,Dogs are mammals,?x rdf:type Dog → ?x rdf:type Mammal,No,"(Rex, rdf:type, Dog)","(Rex, rdf:type, Mammal)",Yes,Basic subsumption rule
+SUB-002,Subclassing,Sports cars are vehicles,?x rdf:type SportsCar → ?x rdf:type Vehicle,No,"(Ferrari1, rdf:type, SportsCar)","(Ferrari1, rdf:type, Vehicle)",Yes,Direct subclass inference
+SUB-003,Subclassing,Multi-level inheritance,?x rdf:type Poodle → ?x rdf:type Dog; ?x rdf:type Dog → ?x rdf:type Mammal,No,"(Fluffy, rdf:type, Poodle)","(Fluffy, rdf:type, Dog), (Fluffy, rdf:type, Mammal)",Yes,Chained rule execution
+SUB-004,Subclassing,Academic hierarchy,?x rdf:type Professor → ?x rdf:type Faculty,No,"(Smith, rdf:type, Professor)","(Smith, rdf:type, Faculty)",Yes,Simple subsumption
+SUB-005,Subclassing,Product categories,?x rdf:type Laptop → ?x rdf:type Computer → ?x rdf:type Electronics,No,"(MacBook, rdf:type, Laptop)","(MacBook, rdf:type, Computer), (MacBook, rdf:type, Electronics)",Yes,Multi-step inheritance
